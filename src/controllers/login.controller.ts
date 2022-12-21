@@ -192,7 +192,6 @@ export class LoginController {
     @param.path.string('token') token: string,
     @requestBody() data: any
   ): Promise<object> {
-    console.log(token)
     const datos = this.jwtService.verificarTokenJWT(token)
     return {
       datos
